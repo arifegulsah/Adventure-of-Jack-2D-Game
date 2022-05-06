@@ -8,7 +8,7 @@ public class WeakSpot : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Player ile çarpýþýrsa yok edecek olan condition burada Tag kullandýðýmýza için Player gameobjectimize arayüzden Player etiketi veriyoruz ki tanýsýn
+        //Player ile çarpýþýrsa yok edecek olan condition burada Tag kullandýðýmýz için Player gameobjectimize arayüzden Player etiketi veriyoruz ki tanýsýn
         //Biz istersek kendimizde default gelenlerin yerine farklý taglerde verebiliriz arayüzden add yapýp
         if (collision.CompareTag("Player"))
         {

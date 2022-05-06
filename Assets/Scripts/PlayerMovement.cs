@@ -6,38 +6,43 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public float jumpForce;
 
+    //zýpladý mý yere deðdi mi? 
     private bool isJumping;
     private bool isGrounded;
 
-    public Transform GroundCheckLeft;
-    public Transform GroundCheckRight;
+    //yere deðip deðmediðini kontrol edecek oldugum deðiþkenler
+    public Transform groundCheck;
+    public float groundCheckRadius;
+    public LayerMask collisionLayers; 
 
     public Rigidbody2D rb;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
 
     private Vector3 velocity = Vector3.zero;
+    private float horizontalMovement;
 
-
-
-    void FixedUpdate()
+    void Update()
     {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayers);
 
-        isGrounded = Physics2D.OverlapArea(GroundCheckLeft.position, GroundCheckRight.position);
+        horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
 
-        float horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
-
+        //karakter havadayken ayaðý yere deðene kadar tekrar zýplamasýný engelle
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             isJumping = true;
         }
 
-        MovePlayer(horizontalMovement);
-
         Flip(rb.velocity.x);
 
         float characterVelocity = Mathf.Abs(rb.velocity.x);
         animator.SetFloat("Speed", characterVelocity);
+    }
+
+    void FixedUpdate()
+    {
+        MovePlayer(horizontalMovement);
     }
 
 
@@ -65,5 +70,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+    }
 }
