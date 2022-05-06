@@ -9,6 +9,9 @@ public class EnemyPatrol : MonoBehaviour
     public float speed;
     public Transform[] waypoints;
 
+    //hasarý dinamik vermek için buradaki deðiþkende tutuyorum
+    public int damageOnCollision = 20; 
+
     public SpriteRenderer graphics;
 
     private Transform target;
@@ -43,7 +46,7 @@ public class EnemyPatrol : MonoBehaviour
         if (collision.transform.CompareTag("Player"))
         {
             PlayerHealth playerHealth = collision.transform.GetComponent<PlayerHealth>();
-            playerHealth.TakeDamage(20);
+            playerHealth.TakeDamage(damageOnCollision);
         }
     }
 }
