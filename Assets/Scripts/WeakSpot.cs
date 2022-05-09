@@ -10,9 +10,18 @@ public class WeakSpot : MonoBehaviour
     {
         //Player ile çarpýþýrsa yok edecek olan condition burada Tag kullandýðýmýz için Player gameobjectimize arayüzden Player etiketi veriyoruz ki tanýsýn
         //Biz istersek kendimizde default gelenlerin yerine farklý taglerde verebiliriz arayüzden add yapýp
+
         if (collision.CompareTag("Player"))
         {
             Destroy(objectToDestroy);
         }
+
+
+        /* HANGÝSÝ DOÐRU????
+         if (collision.tranform.CompareTag("Player"))
+            {
+                Destroy(objectToDestroy);
+            }
+         */
     }
 }
