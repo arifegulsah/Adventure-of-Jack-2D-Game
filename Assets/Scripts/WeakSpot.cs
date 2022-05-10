@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class WeakSpot : MonoBehaviour
 {
+    public bool scriptActive = true;
     //Destroy etmek istediðimiz kodu yazarken Destroy(transform.parent.parent.gameObject); bu þekilde yazabiliriz.
     //Ama bu parent üstü parent þeklinde yazmak iþi çok uzatacaðý için bir deðiþken oluþturuyoruz. Ve bu deðiþkeni arayüz aracýlýðý ile düþmanla eþleþtiriyoruz.
     public GameObject objectToDestroy;
@@ -11,10 +12,18 @@ public class WeakSpot : MonoBehaviour
         //Player ile çarpýþýrsa yok edecek olan condition burada Tag kullandýðýmýz için Player gameobjectimize arayüzden Player etiketi veriyoruz ki tanýsýn
         //Biz istersek kendimizde default gelenlerin yerine farklý taglerde verebiliriz arayüzden add yapýp
 
-        if (collision.CompareTag("Player"))
+        if (scriptActive)
         {
-            Destroy(objectToDestroy);
+            Debug.Log("nesne:" + gameObject.name);
+            Debug.Log("nesne:" + collision.gameObject.name);
+
+            if (collision.CompareTag("Player"))
+            {
+                Destroy(objectToDestroy);
+
+            }
         }
+        
 
 
         /* HANGÝSÝ DOÐRU????
@@ -23,5 +32,15 @@ public class WeakSpot : MonoBehaviour
                 Destroy(objectToDestroy);
             }
          */
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+
+    }
+
+    public void SetScripActive(bool latestValue)
+    {
+        scriptActive = latestValue;
     }
 }
