@@ -5965,6 +5965,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0c0c8cdeee9ebc4ea38592389123903, type: 3}
+--- !u!1001 &3325773854524734303
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3325773853875689167, guid: 5f2cb184fa17be747a8fe114d609dcbd, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325773853875689167, guid: 5f2cb184fa17be747a8fe114d609dcbd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.961
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325773853875689167, guid: 5f2cb184fa17be747a8fe114d609dcbd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325773853875689167, guid: 5f2cb184fa17be747a8fe114d609dcbd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.3656204
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325773853875689167, guid: 5f2cb184fa17be747a8fe114d609dcbd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325773853875689167, guid: 5f2cb184fa17be747a8fe114d609dcbd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325773853875689167, guid: 5f2cb184fa17be747a8fe114d609dcbd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325773853875689167, guid: 5f2cb184fa17be747a8fe114d609dcbd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325773853875689167, guid: 5f2cb184fa17be747a8fe114d609dcbd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325773853875689167, guid: 5f2cb184fa17be747a8fe114d609dcbd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325773853875689167, guid: 5f2cb184fa17be747a8fe114d609dcbd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325773853875689168, guid: 5f2cb184fa17be747a8fe114d609dcbd, type: 3}
+      propertyPath: m_Name
+      value: CheckPoint
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5f2cb184fa17be747a8fe114d609dcbd, type: 3}
 --- !u!1001 &6672142884180019435
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6462,6 +6519,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9164166104628376292, guid: 1d78ffac2cb8b934dac28dbcd3e58929, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 9164166104628376292, guid: 1d78ffac2cb8b934dac28dbcd3e58929, type: 3}
       propertyPath: m_Name
       value: DeathZone
