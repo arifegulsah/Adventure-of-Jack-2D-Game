@@ -6,9 +6,11 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public float jumpForce;
 
-    //zýpladý mý yere deðdi mi? 
+    //zýpladý mý yere deðdi mi? merdivene týrmanýyor mu suan?
+    //isclimbing public olmalý çünkü Ladder.cs fileýmda kullanýyorum
     private bool isJumping;
     private bool isGrounded;
+    public bool isClimbing;
 
     //yere deðip deðmediðini kontrol edecek oldugum deðiþkenler
     public Transform groundCheck;
@@ -21,12 +23,12 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 velocity = Vector3.zero;
     private float horizontalMovement;
+    private float verticalMovement;
 
     void Update()
     {
-        
-
         horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
+        verticalMovement = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
 
         //karakter havadayken ayaðý yere deðene kadar tekrar zýplamasýný engelle
         if (Input.GetButtonDown("Jump") && isGrounded)
@@ -44,19 +46,30 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayers);
 
-        MovePlayer(horizontalMovement);
+        MovePlayer(horizontalMovement, verticalMovement);
     }
 
-
-    void MovePlayer(float _horizontalMovement)
+    //Bu fonskiyon karakterimizi yatay ve dikey eksende hareket ettirir
+    //Yalnýz karakterimiz eðer merdiven týrmanýyor ise karakterin saða sola hareket etmemesi gerekir. Sadece Y ekseninde hareketini saðlamalýyýz.
+    //Bu yüzden isclimbing bool  deðiþkenimizi contiiton olarak kullanýyoruz.
+    void MovePlayer(float _horizontalMovement, float _verticalMovement)
     {
-        Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
-        rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
-
-        if(isJumping == true)
+        if (!isClimbing)
         {
-            rb.AddForce(new Vector2(0f, jumpForce));
-            isJumping = false;
+            Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
+            rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
+
+            if (isJumping == true)
+            {
+                rb.AddForce(new Vector2(0f, jumpForce));
+                isJumping = false;
+            }
+        }
+        //Eðer týrmanýyorsa X ekseninde hareketi kýsýtlansýn!!!
+        else
+        {
+            Vector3 targetVelocity = new Vector2(rb.velocity.x, _verticalMovement);
+            rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
         }
     }
 
