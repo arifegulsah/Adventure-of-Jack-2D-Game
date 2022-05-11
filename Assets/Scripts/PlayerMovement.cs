@@ -4,12 +4,14 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
+    public float climbSpeed;
     public float jumpForce;
 
     //zýpladý mý yere deðdi mi? merdivene týrmanýyor mu suan?
     //isclimbing public olmalý çünkü Ladder.cs fileýmda kullanýyorum
     private bool isJumping;
     private bool isGrounded;
+    [HideInInspector] //Ara yüzden gizlemek için yaptýk. Protected yapmamýz neden iþe yaramadý ve hataya sebep oldu??
     public bool isClimbing;
 
     //yere deðip deðmediðini kontrol edecek oldugum deðiþkenler
@@ -28,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
-        verticalMovement = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
+        verticalMovement = Input.GetAxis("Vertical") * climbSpeed * Time.deltaTime;
 
         //karakter havadayken ayaðý yere deðene kadar tekrar zýplamasýný engelle
         if (Input.GetButtonDown("Jump") && isGrounded)
@@ -39,7 +41,8 @@ public class PlayerMovement : MonoBehaviour
         Flip(rb.velocity.x);
 
         float characterVelocity = Mathf.Abs(rb.velocity.x);
-        animator.SetFloat("Speed", characterVelocity);
+        animator.SetFloat("Speed", characterVelocity); //Speed ismini verdiðim animasyon geçiþi
+        animator.SetBool("isClimbing", isClimbing); //isClimbing isimini verdiðim animasyon geçiþi
     }
 
     void FixedUpdate()
@@ -68,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
         //Eðer týrmanýyorsa X ekseninde hareketi kýsýtlansýn!!!
         else
         {
-            Vector3 targetVelocity = new Vector2(rb.velocity.x, _verticalMovement);
+            Vector3 targetVelocity = new Vector2(0, _verticalMovement);
             rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
         }
     }
