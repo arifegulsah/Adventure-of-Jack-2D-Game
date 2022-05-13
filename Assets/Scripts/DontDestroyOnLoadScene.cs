@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DontDestroyOnLoadScene : MonoBehaviour
 {
@@ -6,11 +7,31 @@ public class DontDestroyOnLoadScene : MonoBehaviour
 
     public GameObject[] objects;
 
-    void Awake()
+    //instanceýmýz
+    public static DontDestroyOnLoadScene instance;
+
+    private void Awake()
     {
+        if (instance != null)
+        {
+            Debug.LogWarning("Sahnede birden fazla DontDestroyOnLoadScene örneði var!!!");
+            return;
+        }
+        instance = this;
+
+        //objelerimizi taþýyan döngü
         foreach (var element in objects)
         {
             DontDestroyOnLoad(element);
+        }
+    }
+
+
+    public void RemoveFromDontDestroyOnLoad()
+    {
+        foreach (var element in objects)
+        {
+            SceneManager.MoveGameObjectToScene(element, SceneManager.GetActiveScene());
         }
     }
 }
