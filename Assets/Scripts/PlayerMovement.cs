@@ -22,10 +22,25 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
+    public CapsuleCollider2D playerCollider;
 
     private Vector3 velocity = Vector3.zero;
     private float horizontalMovement;
     private float verticalMovement;
+
+
+    public static PlayerMovement instance;
+
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogWarning("Sahnede birden fazla PlayerMovement örneði var!!!");
+            return;
+        }
+        instance = this;
+    }
+
 
     void Update()
     {
