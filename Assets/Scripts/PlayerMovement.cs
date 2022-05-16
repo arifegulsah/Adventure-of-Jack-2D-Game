@@ -109,3 +109,8 @@ public class PlayerMovement : MonoBehaviour
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
     }
 }
+
+
+////rigid body freeze x ve y yi mushroom yedikten sonra birkça sanýyeliðine Ienumerator kullanarak activeta enable et. ?? 
+//// camera backgrounda flash verip arka planý çeþitli yeþil veya baska renklerde deðiþtir????
+////canvasa filter yeþilimsi ???
