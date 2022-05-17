@@ -213,6 +213,8 @@ GameObject:
   - component: {fileID: 326771089}
   - component: {fileID: 326771088}
   - component: {fileID: 326771087}
+  - component: {fileID: 326771091}
+  - component: {fileID: 326771090}
   m_Layer: 0
   m_Name: fireEnemy
   m_TagString: Untagged
@@ -304,6 +306,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &326771090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326771086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b6129db0a7df0742961c599ade18544, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageFromFire: 10
+  fireDestroy: {fileID: 326771086}
+  charSpriteRenderer: {fileID: 1292391746}
+  colorChangeDelay: 0.2
+  colorChangeTimeForColor: 2
+--- !u!61 &326771091
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326771086}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.44149888, y: 0.1839447}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0.6875, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10, y: 12.0625}
+    newSize: {x: 10, y: 12.0625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 8.234127, y: 8.457169}
+  m_EdgeRadius: 0
 --- !u!1 &446476021
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,6 +360,8 @@ GameObject:
   - component: {fileID: 446476023}
   - component: {fileID: 446476022}
   - component: {fileID: 446476024}
+  - component: {fileID: 446476025}
+  - component: {fileID: 446476026}
   m_Layer: 0
   m_Name: mushroomEnemy
   m_TagString: Untagged
@@ -381,7 +428,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 446476021}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.1, y: -0.59, z: 0}
+  m_LocalPosition: {x: 45.93, y: -1.61, z: 0}
   m_LocalScale: {x: 0.06302736, y: 0.06577902, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -406,6 +453,46 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &446476025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446476021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5b54229896914343b5f0cfa50723f2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageFromMushroom: 40
+  mushroomDestroy: {fileID: 446476021}
+--- !u!61 &446476026
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446476021}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.06751108, y: 0.1617527}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 15.3125, y: 16}
+    newSize: {x: 15.3125, y: 16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 12.131766, y: 12.182613}
+  m_EdgeRadius: 0
 --- !u!1 &492651025
 GameObject:
   m_ObjectHideFlags: 0
@@ -1419,6 +1506,11 @@ Tilemap:
 --- !u!1 &1292391740 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8419877182171542004, guid: 1138a21315a1f094bb8b84e130fc34db, type: 3}
+  m_PrefabInstance: {fileID: 8419877180880200904}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1292391746 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8419877182171541896, guid: 1138a21315a1f094bb8b84e130fc34db, type: 3}
   m_PrefabInstance: {fileID: 8419877180880200904}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1340889615
@@ -7379,6 +7471,18 @@ CompositeCollider2D:
         Y: -19996959
       - X: 499951017
         Y: -19996900
+      - X: 469954084
+        Y: -19996900
+      - X: 469954084
+        Y: -19998041
+      - X: 469954025
+        Y: -19998100
+      - X: 459953943
+        Y: -19998100
+      - X: 459953884
+        Y: -19998041
+      - X: 459953884
+        Y: -19996900
       - X: 419957975
         Y: -19996900
       - X: 419957916
@@ -10642,16 +10746,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1292391740}
     - target: {fileID: 1090061139737570811, guid: 6fddc5c97e0bd724a8d52fec45256717, type: 3}
+      propertyPath: orthographic size
+      value: 4.4338975
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090061139737570811, guid: 6fddc5c97e0bd724a8d52fec45256717, type: 3}
       propertyPath: m_BackGroundColor.b
-      value: 0.9137255
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1090061139737570811, guid: 6fddc5c97e0bd724a8d52fec45256717, type: 3}
       propertyPath: m_BackGroundColor.g
-      value: 0.88567483
+      value: 0.94238764
       objectReference: {fileID: 0}
     - target: {fileID: 1090061139737570811, guid: 6fddc5c97e0bd724a8d52fec45256717, type: 3}
       propertyPath: m_BackGroundColor.r
-      value: 0.6862745
+      value: 0.5226415
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fddc5c97e0bd724a8d52fec45256717, type: 3}
@@ -11034,11 +11142,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7294122159664098306, guid: cf4558ab34aeac54197fb87ddbbf3d91, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.02
+      value: 49.17
       objectReference: {fileID: 0}
     - target: {fileID: 7294122159664098306, guid: cf4558ab34aeac54197fb87ddbbf3d91, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: -0.99
       objectReference: {fileID: 0}
     - target: {fileID: 7294122159664098306, guid: cf4558ab34aeac54197fb87ddbbf3d91, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11190,6 +11298,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8419877182171541896, guid: 1138a21315a1f094bb8b84e130fc34db, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8419877182171541896, guid: 1138a21315a1f094bb8b84e130fc34db, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8419877182171541896, guid: 1138a21315a1f094bb8b84e130fc34db, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8419877182171541897, guid: 1138a21315a1f094bb8b84e130fc34db, type: 3}
       propertyPath: m_RootOrder
       value: 2

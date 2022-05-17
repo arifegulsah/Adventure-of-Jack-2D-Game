@@ -100,6 +100,8 @@ public class PlayerHealth : MonoBehaviour
         PlayerMovement.instance.animator.SetTrigger("Death");
         PlayerMovement.instance.rb.bodyType = RigidbodyType2D.Kinematic;
         PlayerMovement.instance.playerCollider.enabled = false;
+        //Hocayla yazdýðýmýz kýsým kameranýn karakter öldükten sonra ilerlemesini engelliyor
+        GameObject.Find("Main Camera").SendMessage("SetMoveCameraEnable", false);
         GameOverManager.instance.OnPlayerDeath();
     }
 
@@ -110,6 +112,7 @@ public class PlayerHealth : MonoBehaviour
         PlayerMovement.instance.rb.bodyType = RigidbodyType2D.Dynamic;
         PlayerMovement.instance.playerCollider.enabled = true;
         currentHealth = maxHealth;
+        GameObject.Find("Main Camera").SendMessage("SetMoveCameraEnable", true);
         healthBar.SetHealth(currentHealth);
     }
 

@@ -34,11 +34,6 @@ public class WeakSpot : MonoBehaviour
          */
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-
-    }
-
     public void SetScripActive(bool latestValue)
     {
         scriptActive = latestValue;
