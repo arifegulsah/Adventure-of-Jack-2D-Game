@@ -467,6 +467,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageFromMushroom: 40
   mushroomDestroy: {fileID: 446476021}
+  charSpriteRenderer: {fileID: 1292391746}
+  colorChangeDelay: 0.2
+  colorChangeTimeForColor: 2
 --- !u!61 &446476026
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10741,10 +10744,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 1090061139737570808, guid: 6fddc5c97e0bd724a8d52fec45256717, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1090061139737570810, guid: 6fddc5c97e0bd724a8d52fec45256717, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1292391740}
+    - target: {fileID: 1090061139737570810, guid: 6fddc5c97e0bd724a8d52fec45256717, type: 3}
+      propertyPath: green.b
+      value: 0.895792
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090061139737570810, guid: 6fddc5c97e0bd724a8d52fec45256717, type: 3}
+      propertyPath: eachColorTime
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090061139737570810, guid: 6fddc5c97e0bd724a8d52fec45256717, type: 3}
+      propertyPath: cameraColorChangeDelay
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1090061139737570811, guid: 6fddc5c97e0bd724a8d52fec45256717, type: 3}
       propertyPath: orthographic size
       value: 4.4338975

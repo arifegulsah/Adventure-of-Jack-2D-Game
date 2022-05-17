@@ -14,6 +14,7 @@ public class FireEnemy : MonoBehaviour
             Debug.Log("kontrol");
             PlayerHealth playerHealth = collision.transform.GetComponent<PlayerHealth>();
             playerHealth.TakeDamage(damageFromFire);
+
             StartCoroutine(ColorChangeRed());
             StartCoroutine(HandleColorChangeDelay());
         }
