@@ -42,10 +42,5 @@ public class mushroomEnemy : MonoBehaviour
     {
         yield return new WaitForSeconds(colorChangeTimeForColor);
     }
-
-
-
-
-
     
 }
