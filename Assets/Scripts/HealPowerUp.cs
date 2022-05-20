@@ -4,6 +4,9 @@ using UnityEngine;
 public class HealPowerUp : MonoBehaviour
 {
     public int healthPoint = 10;
+
+    public AudioClip healSound;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -12,6 +15,7 @@ public class HealPowerUp : MonoBehaviour
             //Yani oyuncu geri dönüp kalpleri alabilecek caný azaldýðý zaman
             if(PlayerHealth.instance.currentHealth != PlayerHealth.instance.maxHealth)
             {
+                AudioManager.instance.PlayClipAt(healSound, transform.position);
                 PlayerHealth.instance.HealPlayer(healthPoint);
                 Destroy(gameObject);
             }

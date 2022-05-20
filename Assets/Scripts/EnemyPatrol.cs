@@ -17,6 +17,7 @@ public class EnemyPatrol : MonoBehaviour
     private Transform target;
     private int destPoint = 0;
 
+    public AudioClip snakeBitSound;
 
     void Start()
     {
@@ -43,12 +44,11 @@ public class EnemyPatrol : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("nesne1:" + gameObject.name);
-        Debug.Log("nesne2:" + collision.gameObject.name);
 
         if (collision.CompareTag("Player"))
         {
-            //????
+            AudioManager.instance.PlayClipAt(snakeBitSound, transform.position);
+            
             PlayerHealth playerHealth = collision.transform.GetComponent<PlayerHealth>();
             playerHealth.TakeDamage(damageOnCollision);
             GameObject.Find("WeakSpot").SendMessage("SetScripActive", false);

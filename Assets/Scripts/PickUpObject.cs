@@ -6,12 +6,18 @@ public class PickUpObject : MonoBehaviour
     // coin ve kalp objelerini alaraktan para ve saðlýk kazanacaðýz gibi
     // bahsi geçen objelerin arayüzde isTrigger seçeneðinin aktif olmasý gerekmektedir.
 
+    public AudioClip sound;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //eðer collision Player tagli elementle etkileþime girerse? yani ana karakterimiz paraya/kalbe deðerse
         //scripti verdiðimiz obje (coin ya da kalp artýk neyse) kendini yok eder.
         if (collision.CompareTag("Player"))
         {
+            //audioSource.PlayOneShot(sound);
+            //AudioSource.PlayClipAtPoint(sound, transform.position);
+
+            AudioManager.instance.PlayClipAt(sound, transform.position);
             Inventory.instance.AddCoins(1);
             CurrentSceneManager.instance.coinsPickedUpInThisSceneCount++;
             Destroy(gameObject);

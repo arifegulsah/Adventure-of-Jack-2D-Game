@@ -7,6 +7,8 @@ public class WeakSpot : MonoBehaviour
     //Ama bu parent üstü parent þeklinde yazmak iþi çok uzatacaðý için bir deðiþken oluþturuyoruz. Ve bu deðiþkeni arayüz aracýlýðý ile düþmanla eþleþtiriyoruz.
     public GameObject objectToDestroy;
 
+    public AudioClip killSnakeSound;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Player ile çarpýþýrsa yok edecek olan condition burada Tag kullandýðýmýz için Player gameobjectimize arayüzden Player etiketi veriyoruz ki tanýsýn
@@ -14,13 +16,10 @@ public class WeakSpot : MonoBehaviour
 
         if (scriptActive)
         {
-            Debug.Log("nesne:" + gameObject.name);
-            Debug.Log("nesne:" + collision.gameObject.name);
-
             if (collision.CompareTag("Player"))
             {
+                AudioManager.instance.PlayClipAt(killSnakeSound, transform.position);
                 Destroy(objectToDestroy);
-
             }
         }
         

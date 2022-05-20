@@ -7,11 +7,13 @@ public class FireEnemy : MonoBehaviour
     public int damageFromFire = 10;
     public GameObject fireDestroy;
 
+    public AudioClip fireSound;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("kontrol");
+            AudioManager.instance.PlayClipAt(fireSound, transform.position);
             PlayerHealth playerHealth = collision.transform.GetComponent<PlayerHealth>();
             playerHealth.TakeDamage(damageFromFire);
 

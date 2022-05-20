@@ -7,11 +7,13 @@ public class mushroomEnemy : MonoBehaviour
     public int damageFromMushroom = 40;
     public GameObject mushroomDestroy;
 
+    public AudioClip eatMushroomSound;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("kontrol");
+            AudioManager.instance.PlayClipAt(eatMushroomSound, transform.position);
             PlayerHealth playerHealth = collision.transform.GetComponent<PlayerHealth>();
             playerHealth.TakeDamage(damageFromMushroom);
             Destroy(mushroomDestroy);
