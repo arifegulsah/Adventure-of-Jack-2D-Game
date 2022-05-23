@@ -21,7 +21,6 @@ public class Chest : MonoBehaviour
     {
         interactEminMisin = GameObject.FindGameObjectWithTag("eminMisinText").GetComponent<Text>();
         interactUI = GameObject.FindGameObjectWithTag("InteractUI").GetComponent<Text>();
-        
 
     }
 
