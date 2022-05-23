@@ -144,6 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageFromFire: 10
   fireDestroy: {fileID: 7889779439126009050}
+  fireSound: {fileID: 8300000, guid: 6f9bb8b688615724ca1705aab5dce4dc, type: 3}
   charSpriteRenderer: {fileID: 0}
   colorChangeDelay: 0.2
   colorChangeTimeForColor: 2

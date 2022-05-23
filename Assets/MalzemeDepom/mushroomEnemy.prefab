@@ -118,6 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageFromMushroom: 40
   mushroomDestroy: {fileID: 3002345379752923294}
+  eatMushroomSound: {fileID: 8300000, guid: 6559468301f6fb64a849632dfde04f0e, type: 3}
   charSpriteRenderer: {fileID: 0}
   colorChangeDelay: 0.2
   colorChangeTimeForColor: 2

@@ -7,6 +7,8 @@ public class CheckPoint : MonoBehaviour
 
     private Transform playerSpawn;
 
+    public AudioClip flagSound;
+
     private void Awake()
     {
         playerSpawn = GameObject.FindGameObjectWithTag("PlayerSpawn").transform;
@@ -16,6 +18,7 @@ public class CheckPoint : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            AudioManager.instance.PlayClipAt(flagSound, transform.position);
             playerSpawn.position = transform.position;
             //Burda destroy ederek bir sonraki check pointin daha powerfull olmasýný saðlýyoruz
             //Yoksa oyuncu 2. checkpointi elde ettikten sonra tekrar bir önceki checkpoint ile temas ederse 1. check point devreye girer 

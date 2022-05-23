@@ -190,6 +190,7 @@ MonoBehaviour:
   - {fileID: 7025662692142369752}
   damageOnCollision: 20
   graphics: {fileID: 7025662692168404334}
+  snakeBitSound: {fileID: 8300000, guid: 4d05e0ae91f86754ea4ecf1d99b7c7b4, type: 3}
 --- !u!95 &7025662692168404320
 Animator:
   serializedVersion: 3
@@ -281,6 +282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scriptActive: 1
   objectToDestroy: {fileID: 7025662693114151427}
+  killSnakeSound: {fileID: 8300000, guid: 64c26d3fa969efa41aadea98abf1d22d, type: 3}
 --- !u!1 &7025662693114151427
 GameObject:
   m_ObjectHideFlags: 0

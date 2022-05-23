@@ -9,6 +9,8 @@ public class LoadSpecificScene : MonoBehaviour
     public string sceneName;
     public Animator fadeSystem;
 
+    public AudioClip doorOpenSound;
+
     private void Awake()
     {
         fadeSystem = GameObject.FindGameObjectWithTag("FadeSystem").GetComponent<Animator>();
@@ -18,6 +20,7 @@ public class LoadSpecificScene : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            AudioManager.instance.PlayClipAt(doorOpenSound, transform.position);
             StartCoroutine(loadNextScene());
         }
     }
