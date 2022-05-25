@@ -628,6 +628,18 @@ PrefabInstance:
       propertyPath: soundEffectMixer
       value: 
       objectReference: {fileID: -6318714979005497427, guid: d30a29eded2b8fe4f8c864da38c4f652, type: 2}
+    - target: {fileID: 4418583839984190852, guid: 41d9e2dcb10d85544a5113551734f3c1, type: 3}
+      propertyPath: playlist.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4418583839984190852, guid: 41d9e2dcb10d85544a5113551734f3c1, type: 3}
+      propertyPath: playlist.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: eab55a7cbe775f54fa2363afd45ea3ba, type: 3}
+    - target: {fileID: 4418583839984190852, guid: 41d9e2dcb10d85544a5113551734f3c1, type: 3}
+      propertyPath: playlist.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: eab55a7cbe775f54fa2363afd45ea3ba, type: 3}
     - target: {fileID: 4418583839984190853, guid: 41d9e2dcb10d85544a5113551734f3c1, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
