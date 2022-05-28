@@ -123,3 +123,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bosBirSandikMi: {fileID: 0}
+  uselessChestSound: {fileID: 8300000, guid: 448941a14e3bb0e419ae118ff827bebb, type: 3}
+  chestSpriteRenderer: {fileID: 6610922660807663323}
+  chestBoxCollider: {fileID: 6610922660807663320}

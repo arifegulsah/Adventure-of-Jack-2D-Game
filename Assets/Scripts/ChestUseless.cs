@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class ChestUseless : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class ChestUseless : MonoBehaviour
 
     private bool isInRange = false;
 
+    public AudioClip uselessChestSound;
+
+    public SpriteRenderer chestSpriteRenderer;
+    public BoxCollider2D chestBoxCollider;
 
     void Awake()
     {
@@ -23,7 +28,29 @@ public class ChestUseless : MonoBehaviour
         {
             bosBirSandikMi.enabled = true;
             interactUI.enabled = false;
+
+            AudioManager.instance.PlayClipAt(uselessChestSound, transform.position);
+            //chestSpriteRenderer.color = new Color(1f, 0f, 0f, 0f);
+            //Check();
+            //StartCoroutine(SpriteRendererDestroy());
+
         }
+    }
+
+    /*
+    void Check()
+    {
+        if (chestSpriteRenderer.color == new Color(1f, 0f, 0f, 0f))
+        {
+            StartCoroutine(BoxColliderDestroy());
+        }
+    }
+    */
+
+    public IEnumerator SpriteRendererDestroy()
+    {
+        chestSpriteRenderer.enabled = false;
+        yield return new WaitForSeconds(5f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
