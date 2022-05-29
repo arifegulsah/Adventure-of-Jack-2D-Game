@@ -9,6 +9,7 @@ TagManager:
   - InteractUI
   - eminMisinText
   - bosBirSandikMi
+  - AudioManager
   layers:
   - Default
   - TransparentFX
