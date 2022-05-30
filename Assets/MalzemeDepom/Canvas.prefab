@@ -639,7 +639,7 @@ GameObject:
   - component: {fileID: 1052493691}
   m_Layer: 5
   m_Name: NpcName
-  m_TagString: Untagged
+  m_TagString: ForFont
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1952,7 +1952,7 @@ GameObject:
   - component: {fileID: 2103267113}
   m_Layer: 5
   m_Name: NpcText
-  m_TagString: Untagged
+  m_TagString: ForFont2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
