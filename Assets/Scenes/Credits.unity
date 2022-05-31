@@ -259,115 +259,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '<SIZE=170><B>ADVENTURE OF JACK</B>
-
-    </SIZE>
-
-    <SIZE=140>.:GM_STUDIO:.</SIZE>
-
-
-
-
-
-    <SIZE=160><B>ASSETS 
-    USED</B>
-
-    </SIZE>
-
-
-
-    <SIZE=120>- GRAPHICS -</SIZE>
-
-
-
-    <SIZE=60>A 
-    PLATFORMER  IN  THE  FOREST
-
-    <I>BY  BUTCH</I></SIZE>
-
-
-
-    <SIZE=60>HEALTHBAR
-
-    <I>BY 
-    BRACKEYS  TEAM</I></SIZE>
-
-
-
-    <SIZE=60>PROPS
-
-    <I>BY  ZEF  (TUTOUNITYFR)</I></SIZE>
-
-
-
-
-
-
-
-    <SIZE=120>-
-    AUDIO -</SIZE>
-
-
-
-    <SIZE=60>HERO  IMMORTAL
-
-    <I>BY  TREVOR  LENTZ</I></SIZE>
-
-
-
-    <SIZE=60>BOB''S 
-    ADVENTURES  -  BACK34
-
-    <I>BY  TOM  PETER</I></SIZE>
-
-
-
-    <SIZE=60>8-BIT 
-    SOUND  EFFECTS  LIBRARY
-
-    <I>BY  LITTLE  ROBOT  SOUND  FACTORY</I></SIZE>
-
-
-
-
-
-
-
-    <SIZE=120>-
-    FONT -</SIZE>
-
-
-
-    <SIZE=60>PIXELATED
-
-    <I>BY  SKYLAR  PARK</I></SIZE>
-
-
-
-
-
-
-
-    <SIZE=120>-
-    SPECIAL  THANKS -</SIZE>
-
-
-
-    <SIZE=60>TIPEURS
-
-
-
-    <I>PIRGOSTH, DINGELA,
-    GATITO, RS_CHOPS, STEEVE, NICOLAS TRIBOULT, THEDRAGONIGHT69, ELRUMBIS, LE JO
-    CARRY, CUMU, GNE, ARROWBAZ, GORDIAN, ALEC, FIREHANDS, CAPTAIN GERVAIS, CRISTOBALGOONZALEZ,
-    COUASNARD RONAN, ROB0888, L3T1, SPYPROG, VINCENT, MATTHIEU DUPONT</I></SIZE>
-
-
-
-
-
-    <SIZE=60><I>TUTO 
-    UNITY  FR  COMMUNITY  <3</I></SIZE>'
+  m_Text: "<SIZE=170><B>ADVENTURE OF JACK</B>\n</SIZE>\n<SIZE=140>.:GM_STUDIO:.</SIZE>\n\n\n\n\n<SIZE=160><B>ASSETS 
+    USED</B>\n</SIZE>\n\n\n<SIZE=120>- ARIFE GULSAH EROL -</SIZE>\n<SIZE=120>- MELIHCAN
+    KAZIM KARACA-</SIZE>\n\n\n<SIZE=60>HEALTHBAR\n<I>BY  AGE & MKK</I></SIZE>\n\n\n<SIZE=60>PROPS\n<I>BY 
+    AGE & MKK</I></SIZE>\n\n\n\n<SIZE=120>- AUDIO -</SIZE>\n\n\n<SIZE=60>OPENING
+    SONG  \n<I>BY  AGE & MKK</I></SIZE>\n\n\n<SIZE=60>MAIN THEME SONG\n<I>BY  AGE
+    & MKK</I></SIZE>\n\n\n<SIZE=120>- FONT -</SIZE>\n\n\n<SIZE=60>PIXELATED\n<I>BY 
+    AGE & MKK </I></SIZE>\n\n<SIZE=60>ZALGO\n<I>BY  AGE & MKK </I></SIZE>\n\n\n\n\n<SIZE=120>-
+    SPECIAL  THANKS -</SIZE>\n\n\n<SIZE=60>ABDULLAH HOCAMIZ </SIZE>\n"
 --- !u!222 &1302925205
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -412,7 +311,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0.0004272461, y: -4886.5547}
+  m_AnchoredPosition: {x: 0.00036621094, y: -4886.5547}
   m_SizeDelta: {x: 0, y: 9770.912}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1345739436
@@ -728,7 +627,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -4182}
+  m_AnchoredPosition: {x: 0, y: -1565}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2104911791

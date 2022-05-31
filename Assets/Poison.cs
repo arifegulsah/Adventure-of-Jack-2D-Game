@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Poison : MonoBehaviour
 {
@@ -31,19 +32,19 @@ public class Poison : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && isInRange)
         {
-            //interactUI.enabled = false;
-            //interactEminMisin.enabled = true;
+            interactUI.enabled = false;
+            interactEminMisin.enabled = true;
 
-            //if (Input.GetKeyDown(KeyCode.E))
-            //{
-                DrinkPoison();
-            //}
+            CheckIt();
         }
     }
 
     void CheckIt()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Y) && isInRange)
+        {
+            DrinkPoison();
+        }
     }
 
     void DrinkPoison()
@@ -54,6 +55,7 @@ public class Poison : MonoBehaviour
         //GetComponent<BoxCollider2D>().enabled = false;
         //interactUI.enabled = false;
         PlayerHealth.instance.Die();
+        SceneManager.LoadScene("Outro");
     }
 
 

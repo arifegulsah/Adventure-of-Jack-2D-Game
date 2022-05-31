@@ -10,12 +10,12 @@ public class RoseRun : MonoBehaviour
     //hasarý dinamik vermek için buradaki deðiþkende tutuyorum
     public int damageOnCollision = 20;
 
-
+    public SpriteRenderer graphics;
 
     private Transform target;
     private int destPoint = 0;
 
-    public AudioClip snakeBitSound;
+    //public AudioClip snakeBitSound;
 
     void Start()
     {
@@ -34,17 +34,9 @@ public class RoseRun : MonoBehaviour
         {
             destPoint = (destPoint + 1) % waypoints.Length;
             target = waypoints[destPoint];
+            graphics.flipX = !graphics.flipX;
 
         }
     }
 
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-
-        if (collision.CompareTag("Player"))
-        {
-            AudioManager.instance.PlayClipAt(snakeBitSound, transform.position);
-        }
-    }
 }
