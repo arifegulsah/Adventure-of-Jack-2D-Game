@@ -531,11 +531,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2864324028193294571, guid: 7f554a746c761f04c84655f0b7a43efc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.70412207
+      value: -3.35
       objectReference: {fileID: 0}
     - target: {fileID: 2864324028193294571, guid: 7f554a746c761f04c84655f0b7a43efc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.9798058
+      value: 0.78
       objectReference: {fileID: 0}
     - target: {fileID: 2864324028193294571, guid: 7f554a746c761f04c84655f0b7a43efc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6144,6 +6144,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4274518872205512788, guid: cf968f39dad2aa44598bcab2e67df94a, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274518872205512788, guid: cf968f39dad2aa44598bcab2e67df94a, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
       value: 'Her seyi hatirliyorum.....      Onu,    ben oldurdum...
 
@@ -6215,6 +6219,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 588547213, guid: 13c29c165bdb5994c8e0ed63172af1e8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 588547215, guid: 13c29c165bdb5994c8e0ed63172af1e8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7025662692142369752, guid: 13c29c165bdb5994c8e0ed63172af1e8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.86
@@ -6309,7 +6321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7025662693114151427, guid: 13c29c165bdb5994c8e0ed63172af1e8, type: 3}
       propertyPath: m_Name
-      value: Enemy
+      value: ROSERUN2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13c29c165bdb5994c8e0ed63172af1e8, type: 3}
@@ -7407,7 +7419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4274518872205512794, guid: cf968f39dad2aa44598bcab2e67df94a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 58.16
+      value: 49.24
       objectReference: {fileID: 0}
     - target: {fileID: 4274518872205512794, guid: cf968f39dad2aa44598bcab2e67df94a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -52370,12 +52382,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4274518872205512788, guid: cf968f39dad2aa44598bcab2e67df94a, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274518872205512788, guid: cf968f39dad2aa44598bcab2e67df94a, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
       value: Rose... Bu sise?
       objectReference: {fileID: 0}
     - target: {fileID: 4274518872205512788, guid: cf968f39dad2aa44598bcab2e67df94a, type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: "San\u0131r\u0131m o bunu istiyor.\nGunahlarimin bedelini odememi istiyor...."
+      value: "San\u0131r\u0131m o bunu istiyor....\nGunahlarimin bedelini odememi
+        istiyor...."
       objectReference: {fileID: 0}
     - target: {fileID: 4274518872205512791, guid: cf968f39dad2aa44598bcab2e67df94a, type: 3}
       propertyPath: m_Name

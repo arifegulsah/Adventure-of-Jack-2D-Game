@@ -41,10 +41,10 @@ public class PlayerHealth : MonoBehaviour
     {
         
         //BURDA ACABA ÝÞE YARIYOR MU DÝYE H TUSUNA BASINCA HEALTHBARIN AZALIP AZALMADIGINI KONTORL ETTÝM
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            TakeDamage(80);
-        }
+        //if (Input.GetKeyDown(KeyCode.H))
+        //{
+         //   TakeDamage(80);
+        //}
         
         
     }
